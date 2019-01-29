@@ -31,6 +31,6 @@ def extract_titles(promises: List[Dict[str, Any]]) -> List[str]:
 
 def random_title (titles: List[str]) -> str:
     """ This function takes list of titles and returns one string at random. """
-    random.seed(a=1234);
+    #random.seed(a=1234);
     return titles[random.randint(0,len(titles)-1)]
 
