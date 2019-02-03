@@ -3,24 +3,10 @@ import pytest
 import assignment0
 from assignment0 import main
 
-
-def test_download_sanity():
-    assert main.download() is not None
-
-def test_download_size():
-    assert len(main.download()) == 135131
-#soonerfan237@instance-1:/hw/cs5293sp19-assignment0$ cat tests/test_random.py 
-#import pytest
-
-#import assignment0
-#from assignment0 import main
-
-
 def test_extract_request():
     text = main.download()
     promises = main.extract_requests(text)
     assert len(promises) == 174
-
 
 title0 = "Propose a Constitutional Amendment to impose term limits on all members of Congress"
 def test_extract_titles():
